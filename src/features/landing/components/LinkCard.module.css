@@ -1,0 +1,69 @@
+.link__card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 28rem; 
+  height: 4rem; 
+  background: rgba(35, 35, 42, 0.9);
+  border-radius: 0.75rem; 
+  box-shadow: 0 5px 35px 0 rgba(15, 14, 14, 0.4);
+  transition: all 0.3s ease-in-out;
+  gap: 0.75rem; 
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+}
+
+.link__card:hover {
+  box-shadow: 0 5px 35px 0 var(--linkcard__shadow__color), 0 4px 24px 0 #0006;
+  transform: translateY(-1px);
+}
+
+.link__card:active {
+  box-shadow: 0 5px 35px 0 var(--linkcard__shadow__color), 0 4px 24px 0 #0006;
+  transform: translateY(-1px);
+}
+
+.link__card__icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 0.5rem;
+}
+
+.link__card__title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  text-shadow: 0 1px 2px #0008;
+}
+
+/* Variantes de color */
+.link__card__hover__default {
+  --linkcard__shadow__color: rgba(59, 130, 246, 0.4);
+}
+
+.link__card__hover__second__default {
+  --linkcard__shadow__color: rgba(109, 40, 217, 0.4);
+}
+
+.link__card__hover__instagram {
+  --linkcard__shadow__color: rgba(236, 72, 153, 0.4);
+}
+
+.link__card__hover__whatsapp {
+  --linkcard__shadow__color: rgba(40, 167, 69, 0.4);
+}
+
+.link__card__hover__location {
+  --linkcard__shadow__color: rgba(246, 237, 59, 0.4);
+}
+
+.link__card__hover__youtube {
+  --linkcard__shadow__color: rgba(220, 38, 38, 0.4);
+}
+
+@media screen and (max-width: 640px) {
+  .link__card {
+    max-width: 22rem; 
+  }
+}

@@ -1,0 +1,128 @@
+.gallery {
+    position: relative;
+    min-height: 100vh;
+    padding: 1.5rem 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.gallery__background__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%; 
+    object-fit: cover;
+    z-index: 0; 
+    pointer-events: none;
+    filter: brightness(0.25) blur(3px);
+    opacity: 1;
+    mix-blend-mode: darken;
+}
+
+.gallery__title {
+    color: #fff;
+    text-align: center;
+    margin: 1rem 0 1.5rem;
+    font-size: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery__grid {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+    .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 0 1.25rem;
+    }
+    
+    .gallery__title {
+        font-size: 2.2rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media (min-width: 640px) {
+    .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .gallery__title {
+        font-size: 2.5rem;
+        margin: 2rem 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery__grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      padding: 0 1.5rem;
+      max-width: 1400px;
+    }
+    .gallery {
+      padding: 2rem 1rem;
+    }
+    .gallery__title {
+      font-size: 3.2rem;
+      margin: 3rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery__grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+        padding: 0 2rem;
+    }
+    
+    .gallery__title {
+        font-size: 3.5rem;
+        margin: 3.5rem 0;
+    }
+}
+
+.gallery__loading {
+    font-size: 1.2rem;
+    color: rgba(0, 123, 255, 1);
+    font-weight: bold;
+    margin-top: 2rem; 
+    text-align: center;
+    position: relative; 
+    z-index: 1;
+}
+
+.gallery__error {
+    font-size: 1.2rem;
+    color: rgba(220, 38, 38, 0.7); 
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+    position: relative; 
+    z-index: 1;
+}
+
+
+
+

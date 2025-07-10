@@ -1,0 +1,39 @@
+:root {
+  --color-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  --color-text: #ffffff;
+  --font-main: 'Urbanist', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+
+@keyframes slide-out-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+::view-transition-old(root) {
+  animation: slide-out-left 0.8s ease-in-out; 
+}
+
+::view-transition-new(root) {
+  animation: slide-in-right 0.8s ease-in-out; 
+}
+

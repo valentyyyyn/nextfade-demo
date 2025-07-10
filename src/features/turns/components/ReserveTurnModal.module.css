@@ -1,0 +1,135 @@
+.reserve__modal {
+    background-color:rgba(35, 35, 42, 0.9) !important;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    width: 90%; 
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: scaleIn 0.3s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .reserve__modal {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+.reserve__modal__title {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.reserve__modal__time {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.input__container {
+    position: relative;
+    width: 100%;
+}
+
+.input__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-55%);
+    width: 20px;
+    height: 20px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    z-index: 1;
+}
+
+.reserve__modal__input {
+    padding: 12px 15px 12px 42px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.reserve__modal__error {
+    color: rgba(220, 38, 38, 0.7);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.reserve__modal__success {
+    color: rgba(40, 167, 69, 0.7);
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.reserve__modal__buttons {
+    display: flex;
+    justify-content: space-around; 
+    gap: 10px; 
+}
+
+.reserve__modal__button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.reserve__modal__button:first-child {
+    background-color: rgba(40, 167, 69, 0.7);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.reserve__modal__button:first-child:hover,
+.reserve__modal__button:first-child:active {
+    background-color: rgba(40, 167, 69, 0.9);
+}
+
+.reserve__modal__button:hover,
+.reserve__modal__button:active {
+    transform: translateY(-1px);
+}
+
+.reserve__modal__button:last-child {
+    background-color: rgba(220, 38, 38, 0.7);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.reserve__modal__button:last-child:hover,
+.reserve__modal__button:last-child:active {
+    background-color: rgba(220, 38, 38, 0.9);
+}
+
+.reserve__modal__button.reserve__modal__button--success {
+    background-color: rgba(40, 167, 69, 0.7);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

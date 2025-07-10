@@ -1,0 +1,221 @@
+.admin__sections {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); 
+    color: rgba(255, 255, 255, 0.9); 
+    padding: 2rem 1rem; 
+}
+
+.admin__sections::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.admin__content__container {
+    position: relative;
+    z-index: 1;
+    padding: 5rem; 
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.admin__content__container h1 {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+}
+
+.admin__turns__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem; 
+    width: 100%;
+}
+
+.admin__right__column {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .admin__turns__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.admin__turns__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.admin__section__title {
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin__background__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%; 
+    object-fit: cover;
+    z-index: 0; 
+    pointer-events: none;
+    filter: brightness(0.25) blur(3px);
+    opacity: 50;
+    mix-blend-mode: darken;
+}
+
+.admin__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin__filters label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+}
+
+.admin__date__input {
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin-right: 1rem;
+}
+
+.admin__date__input:focus {
+    outline: none;
+    border-color: rgba(220, 38, 38, 0.9);
+    box-shadow:  0 5px 35px 0 rgba(220, 38, 38, 0.4), 0 4px 24px 0 #000;
+}
+
+.admin__clear__filter {
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.admin__clear__filter:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.admin__turns__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.admin__loading,
+.admin__error,
+.admin__empty {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.admin__error {
+    color: #ff6b6b;
+    border-left: 3px solid #ff6b6b;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .admin__content__container {
+        padding: 2rem 1rem;
+    }
+    
+    .admin__filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .admin__date__input {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .admin__clear__filter {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .admin__turns__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 475px) {
+    .admin__content__container {
+        padding: 2rem 0rem;
+    }
+    
+    .admin__filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .admin__date__input {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .admin__clear__filter {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .admin__turns__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
