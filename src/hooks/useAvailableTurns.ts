@@ -26,7 +26,7 @@ export default function useAvailableTurns(): UseAvailableTurnsResult {
         setLoading(true);
         setError(null);
 
-        const API_URL = `${import.meta.env.VITE_API_URL}/api/turns`;
+        const API_URL = `${import.meta.env.VITE_API_URL}/turns`;
 
         try {
             const response = await fetch(API_URL, { signal });

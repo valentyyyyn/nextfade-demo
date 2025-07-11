@@ -17,7 +17,7 @@ export default function useReserveTurn(): UseReserveTurnResult {
         setError(null);
         setSuccess(false);
 
-        const API_URL = `${import.meta.env.VITE_API_URL}/api/turns/${turnId}/reservar`;
+        const API_URL = `${import.meta.env.VITE_API_URL}/turns/${turnId}/reservar`;
 
         try {
             const response = await fetch(API_URL, {

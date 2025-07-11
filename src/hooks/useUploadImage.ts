@@ -41,7 +41,7 @@ export default function useUploadImage(): UseUploadImageResult {
     formData.append('file', file);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/Gallery`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/Gallery`, {
         method: 'POST',
         body: formData,
       });

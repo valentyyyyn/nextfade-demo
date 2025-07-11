@@ -10,7 +10,7 @@ export default function useGalleryImages() {
         setLoading(true);
         setError(null);
 
-        const API_URL = `${import.meta.env.VITE_API_URL}/api/Gallery`;
+        const API_URL = `${import.meta.env.VITE_API_URL}/Gallery`;
 
         try {
             const response = await fetch(API_URL, { signal });

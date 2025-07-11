@@ -14,7 +14,7 @@ export default function useCancelTurn(): UseCancelTurnResult {
         setLoading(true);
         setError(null);
 
-        const API_URL = `${import.meta.env.VITE_API_URL}/api/turns/${id}/cancelar`;
+        const API_URL = `${import.meta.env.VITE_API_URL}/turns/${id}/cancelar`;
 
         try {
             const response = await fetch(API_URL, {

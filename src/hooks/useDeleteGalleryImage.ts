@@ -14,7 +14,7 @@ export default function useDeleteGalleryImage(): UseDeleteGalleryImageResult {
         setLoading(true);
         setError(null);
 
-        const API_URL = `${import.meta.env.VITE_API_URL}/api/gallery/${id}`;
+        const API_URL = `${import.meta.env.VITE_API_URL}/gallery/${id}`;
 
         try {
             const response = await fetch(API_URL, {
